@@ -39,7 +39,6 @@ int main(int argc, char **argv)
 		printf("memory allocation success\n");
 	}
 
-	//memset(data, 0, data_size);
 #if 1
 	for (i = 0; i < (data_size >> 3); i++) {
 		data[i] = i;
@@ -58,7 +57,6 @@ int main(int argc, char **argv)
 		} else if (pid > 0) { // after the child terminates
 			clock_gettime(CLOCK_MONOTONIC, &end_time);
 			printf("Elased Time for vfork() with %luGB data: %lu ns\n", data_size_GB, get_timediff(&start_time, &end_time));
-			//printf("I'm parent pid=%d\n", getpid());
 		}
 	} else { // fork
 		pid = fork();
