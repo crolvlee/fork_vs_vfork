@@ -39,7 +39,6 @@ int main(int argc, char **argv)
 		printf("memory allocation success\n");
 	}
 
-	//memset(data, 0, data_size);
 #if 1
 	for (i = 0; i < (data_size >> 3); i++) {
 		data[i] = i;
